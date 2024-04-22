@@ -1,15 +1,15 @@
-import sys
-import time
-import signal
-import re
-from collections import Counter
+import sys                          # Imports the sys module, which provides access to some variables used or maintained by the Python interpreter and to functions that interact with the interpreter.
+import time                         # Imports the time module, which provides various time-related functions.
+import signal                       # Imports the signal module, which provides mechanisms to handle asynchronous events such as signals.
+import re                           # Imports the re module, which provides support for regular expressions.
+from collections import Counter     # Imports the Counter class from the collections module, which is used for counting occurrences of elements in a sequence.
 
-# Function to handle Ctrl+C and exit gracefully
+# Function to handle Ctrl+C and exit gracefully so that Defines a function signal_handler that handles the SIGINT signal (Ctrl+C) and exits the script gracefully when it's received.
 def signal_handler(sig, frame):
     print("\nMonitoring stopped.")
     sys.exit(0)
 
-# Function to monitor log file
+# Function to monitor log file so that 
 def monitor_log_file(log_file_path, keywords):
     try:
         print(f"Monitoring log file: {log_file_path}")
